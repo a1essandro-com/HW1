@@ -1,0 +1,10 @@
+<span>{{name}} app is running!</span><br>
+<button (click)="change_name()">Изменить имя</button><br>
+<input type="text" name="name" [(ngModule)] = "name"><br>
+<input type="number" name="age" [(ngModule)] = "age">
+<hr>
+<app-something #appsomething [user_name]='name' [user_age]='age' (onChanged) = "onChanged($event)"></app-something>
+<hr>
+<button (click)="appsomething.pl()">plus</button>
+<button (click)="appsomething.min()">minus</button>
+<router-outlet></router-outlet>
